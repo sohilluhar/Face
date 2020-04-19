@@ -1,0 +1,1057 @@
+2]
+(c) 2019 Microsoft Corporation. All rights reserved.
+
+(base) C:\Users\Dhananjay\Downloads\FaceIdentification_final-20200124T183104Z-001\FaceIdentification_final>python
+Python 3.7.4 (default, Aug  9 2019, 18:34:13) [MSC v.1915 64 bit (AMD64)] :: Anaconda, Inc. on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> exit()
+
+(base) C:\Users\Dhananjay\Downloads\FaceIdentification_final-20200124T183104Z-001\FaceIdentification_final>cond
+'cond' is not recognized as an internal or external command,
+operable program or batch file.
+
+(base) C:\Users\Dhananjay\Downloads\FaceIdentification_final-20200124T183104Z-001\FaceIdentification_final>anaconda
+usage: anaconda [-h] [--disable-ssl-warnings] [--show-traceback] [-v] [-q]
+                [-V] [-t TOKEN] [-s SITE]
+                ...
+anaconda: error: A sub command must be given. To show all available sub commands, run:
+
+         anaconda -h
+
+
+(base) C:\Users\Dhananjay\Downloads\FaceIdentification_final-20200124T183104Z-001\FaceIdentification_final>anaconda activate facerecod
+usage: anaconda [-h] [--disable-ssl-warnings] [--show-traceback] [-v] [-q]
+                [-V] [-t TOKEN] [-s SITE]
+                ...
+anaconda: error: argument : invalid choice: 'activate' (choose from 'auth', 'label', 'channel', 'config', 'copy', 'download', 'groups', 'login', 'logout', 'move', 'notebook', 'package', 're
+move', 'search', 'show', 'upload', 'whoami')
+
+(base) C:\Users\Dhananjay\Downloads\FaceIdentification_final-20200124T183104Z-001\FaceIdentification_final>anaconda activate facerecog
+usage: anaconda [-h] [--disable-ssl-warnings] [--show-traceback] [-v] [-q]
+                [-V] [-t TOKEN] [-s SITE]
+                ...
+anaconda: error: argument : invalid choice: 'activate' (choose from 'auth', 'label', 'channel', 'config', 'copy', 'download', 'groups', 'login', 'logout', 'move', 'notebook', 'package', 're
+move', 'search', 'show', 'upload', 'whoami')
+
+(base) C:\Users\Dhananjay\Downloads\FaceIdentification_final-20200124T183104Z-001\FaceIdentification_final>conda
+usage: conda-script.py [-h] [-V] command ...
+
+conda is a tool for managing and deploying applications, environments and packages.
+
+Options:
+
+positional arguments:
+  command
+    clean        Remove unused packages and caches.
+    config       Modify configuration values in .condarc. This is modeled
+                 after the git config command. Writes to the user .condarc
+                 file (C:\Users\Dhananjay\.condarc) by default.
+    create       Create a new conda environment from a list of specified
+                 packages.
+    help         Displays a list of available conda commands and their help
+                 strings.
+    info         Display information about current conda install.
+    init         Initialize conda for shell interaction. [Experimental]
+    install      Installs a list of packages into a specified conda
+                 environment.
+    list         List linked packages in a conda environment.
+    package      Low-level conda package utility. (EXPERIMENTAL)
+    remove       Remove a list of packages from a specified conda environment.
+    uninstall    Alias for conda remove.
+    run          Run an executable in a conda environment. [Experimental]
+    search       Search for packages and display associated information. The
+                 input is a MatchSpec, a query language for conda packages.
+                 See examples below.
+    update       Updates conda packages to the latest compatible version.
+    upgrade      Alias for conda update.
+
+optional arguments:
+  -h, --help     Show this help message and exit.
+  -V, --version  Show the conda version number and exit.
+
+conda commands available from other packages:
+  build
+  convert
+  debug
+  develop
+  env
+  index
+  inspect
+  metapackage
+  render
+  server
+  skeleton
+  verify
+
+(base) C:\Users\Dhananjay\Downloads\FaceIdentification_final-20200124T183104Z-001\FaceIdentification_final>conda activate facerecod
+Could not find conda environment: facerecod
+You can list all discoverable environments with `conda info --envs`.
+
+
+(base) C:\Users\Dhananjay\Downloads\FaceIdentification_final-20200124T183104Z-001\FaceIdentification_final>conda activate facerecog
+
+(facerecog) C:\Users\Dhananjay\Downloads\FaceIdentification_final-20200124T183104Z-001\FaceIdentification_final>clear
+'clear' is not recognized as an internal or external command,
+operable program or batch file.
+
+
+(facerecog) C:\Users\Dhananjay\Downloads\FaceIdentification_final-20200124T183104Z-001\FaceIdentification_final>pip install tensorflow
+Collecting tensorflow
+  Downloading https://files.pythonhosted.org/packages/34/d5/ce8c17971067c0184c9045112b755be5461d5ce5253ef65a367e1298d7c5/tensorflow-2.1.0-cp37-cp37m-win_amd64.whl (355.8MB)
+     |████████████████████████████████| 355.9MB 76kB/s
+Collecting keras-applications>=1.0.8
+  Downloading https://files.pythonhosted.org/packages/71/e3/19762fdfc62877ae9102edf6342d71b28fbfd9dea3d2f96a882ce099b03f/Keras_Applications-1.0.8-py3-none-any.whl (50kB)
+     |████████████████████████████████| 51kB 3.2MB/s
+Collecting tensorboard<2.2.0,>=2.1.0
+  Downloading https://files.pythonhosted.org/packages/40/23/53ffe290341cd0855d595b0a2e7485932f473798af173bbe3a584b99bb06/tensorboard-2.1.0-py3-none-any.whl (3.8MB)
+     |████████████████████████████████| 3.8MB 939kB/s
+Collecting numpy<2.0,>=1.16.0
+  Downloading https://files.pythonhosted.org/packages/a9/38/f6d6d8635d496d6b4ed5d8ca4b9f193d0edc59999c3a63779cbc38aa650f/numpy-1.18.1-cp37-cp37m-win_amd64.whl (12.8MB)
+     |████████████████████████████████| 12.8MB 1.3MB/s
+Collecting protobuf>=3.8.0
+  Downloading https://files.pythonhosted.org/packages/30/c6/286db43e2d0d4b89d328a222365c7a253a99a24067812253f0d4f8eb0f1c/protobuf-3.11.2-cp37-cp37m-win_amd64.whl (1.0MB)
+     |████████████████████████████████| 1.0MB 285kB/s
+Collecting termcolor>=1.1.0
+  Downloading https://files.pythonhosted.org/packages/8a/48/a76be51647d0eb9f10e2a4511bf3ffb8cc1e6b14e9e4fab46173aa79f981/termcolor-1.1.0.tar.gz
+Collecting astor>=0.6.0
+  Downloading https://files.pythonhosted.org/packages/c3/88/97eef84f48fa04fbd6750e62dcceafba6c63c81b7ac1420856c8dcc0a3f9/astor-0.8.1-py2.py3-none-any.whl
+Collecting grpcio>=1.8.6
+  Downloading https://files.pythonhosted.org/packages/8b/14/ab1501cfff78b88d7368659b227c603d7599dd25226ff682c71334e78aed/grpcio-1.26.0-cp37-cp37m-win_amd64.whl (1.8MB)
+     |████████████████████████████████| 1.8MB 1.3MB/s
+Collecting scipy==1.4.1; python_version >= "3"
+  Downloading https://files.pythonhosted.org/packages/61/51/046cbc61c7607e5ecead6ff1a9453fba5e7e47a5ea8d608cc7036586a5ef/scipy-1.4.1-cp37-cp37m-win_amd64.whl (30.9MB)
+     |████████████████████████████████| 30.9MB 544kB/s
+Collecting absl-py>=0.7.0
+  Downloading https://files.pythonhosted.org/packages/1a/53/9243c600e047bd4c3df9e69cfabc1e8004a82cac2e0c484580a78a94ba2a/absl-py-0.9.0.tar.gz (104kB)
+     |████████████████████████████████| 112kB 71kB/s
+Collecting gast==0.2.2
+  Downloading https://files.pythonhosted.org/packages/4e/35/11749bf99b2d4e3cceb4d55ca22590b0d7c2c62b9de38ac4a4a7f4687421/gast-0.2.2.tar.gz
+Collecting keras-preprocessing>=1.1.0
+  Downloading https://files.pythonhosted.org/packages/28/6a/8c1f62c37212d9fc441a7e26736df51ce6f0e38455816445471f10da4f0a/Keras_Preprocessing-1.1.0-py2.py3-none-any.whl (41kB)
+     |████████████████████████████████| 51kB 182kB/s
+Collecting opt-einsum>=2.3.2
+  Downloading https://files.pythonhosted.org/packages/b8/83/755bd5324777875e9dff19c2e59daec837d0378c09196634524a3d7269ac/opt_einsum-3.1.0.tar.gz (69kB)
+     |████████████████████████████████| 71kB 511kB/s
+Collecting tensorflow-estimator<2.2.0,>=2.1.0rc0
+  Downloading https://files.pythonhosted.org/packages/18/90/b77c328a1304437ab1310b463e533fa7689f4bfc41549593056d812fab8e/tensorflow_estimator-2.1.0-py2.py3-none-any.whl (448kB)
+     |████████████████████████████████| 450kB 386kB/s
+Collecting wrapt>=1.11.1
+  Downloading https://files.pythonhosted.org/packages/23/84/323c2415280bc4fc880ac5050dddfb3c8062c2552b34c2e512eb4aa68f79/wrapt-1.11.2.tar.gz
+Requirement already satisfied: wheel>=0.26; python_version >= "3" in c:\users\dhananjay\anaconda3\envs\facerecog\lib\site-packages (from tensorflow) (0.33.6)
+Collecting google-pasta>=0.1.6
+  Downloading https://files.pythonhosted.org/packages/c3/fd/1e86bc4837cc9a3a5faf3db9b1854aa04ad35b5f381f9648fbe81a6f94e4/google_pasta-0.1.8-py3-none-any.whl (57kB)
+     |████████████████████████████████| 61kB 3.8MB/s
+Collecting six>=1.12.0
+  Downloading https://files.pythonhosted.org/packages/65/eb/1f97cb97bfc2390a276969c6fae16075da282f5058082d4cb10c6c5c1dba/six-1.14.0-py2.py3-none-any.whl
+Collecting h5py
+  Downloading https://files.pythonhosted.org/packages/a1/6b/7f62017e3f0b32438dd90bdc1ff0b7b1448b6cb04a1ed84f37b6de95cd7b/h5py-2.10.0-cp37-cp37m-win_amd64.whl (2.5MB)
+     |████████████████████████████████| 2.5MB 1.3MB/s
+Collecting markdown>=2.6.8
+  Downloading https://files.pythonhosted.org/packages/c0/4e/fd492e91abdc2d2fcb70ef453064d980688762079397f779758e055f6575/Markdown-3.1.1-py2.py3-none-any.whl (87kB)
+     |████████████████████████████████| 92kB 3.0MB/s
+Collecting requests<3,>=2.21.0
+  Downloading https://files.pythonhosted.org/packages/51/bd/23c926cd341ea6b7dd0b2a00aba99ae0f828be89d72b2190f27c11d4b7fb/requests-2.22.0-py2.py3-none-any.whl (57kB)
+     |████████████████████████████████| 61kB 3.8MB/s
+Requirement already satisfied: setuptools>=41.0.0 in c:\users\dhananjay\anaconda3\envs\facerecog\lib\site-packages (from tensorboard<2.2.0,>=2.1.0->tensorflow) (44.0.0.post20200106)
+Collecting google-auth<2,>=1.6.3
+  Downloading https://files.pythonhosted.org/packages/1c/6d/7aae38a9022f982cf8167775c7fc299f203417b698c27080ce09060bba07/google_auth-1.11.0-py2.py3-none-any.whl (76kB)
+     |████████████████████████████████| 81kB 1.7MB/s
+Collecting werkzeug>=0.11.15
+  Downloading https://files.pythonhosted.org/packages/ce/42/3aeda98f96e85fd26180534d36570e4d18108d62ae36f87694b476b83d6f/Werkzeug-0.16.0-py2.py3-none-any.whl (327kB)
+     |████████████████████████████████| 327kB 364kB/s
+Collecting google-auth-oauthlib<0.5,>=0.4.1
+  Downloading https://files.pythonhosted.org/packages/7b/b8/88def36e74bee9fce511c9519571f4e485e890093ab7442284f4ffaef60b/google_auth_oauthlib-0.4.1-py2.py3-none-any.whl
+Requirement already satisfied: certifi>=2017.4.17 in c:\users\dhananjay\anaconda3\envs\facerecog\lib\site-packages (from requests<3,>=2.21.0->tensorboard<2.2.0,>=2.1.0->tensorflow) (2019.11
+.28)
+Collecting urllib3!=1.25.0,!=1.25.1,<1.26,>=1.21.1
+  Downloading https://files.pythonhosted.org/packages/e8/74/6e4f91745020f967d09332bb2b8b9b10090957334692eb88ea4afe91b77f/urllib3-1.25.8-py2.py3-none-any.whl (125kB)
+     |████████████████████████████████| 133kB 262kB/s
+Collecting idna<2.9,>=2.5
+  Downloading https://files.pythonhosted.org/packages/14/2c/cd551d81dbe15200be1cf41cd03869a46fe7226e7450af7a6545bfc474c9/idna-2.8-py2.py3-none-any.whl (58kB)
+     |████████████████████████████████| 61kB 2.0MB/s
+Collecting chardet<3.1.0,>=3.0.2
+  Downloading https://files.pythonhosted.org/packages/bc/a9/01ffebfb562e4274b6487b4bb1ddec7ca55ec7510b22e4c51f14098443b8/chardet-3.0.4-py2.py3-none-any.whl (133kB)
+     |████████████████████████████████| 143kB 819kB/s
+Collecting cachetools<5.0,>=2.0.0
+  Downloading https://files.pythonhosted.org/packages/08/6a/abf83cb951617793fd49c98cb9456860f5df66ff89883c8660aa0672d425/cachetools-4.0.0-py3-none-any.whl
+Collecting pyasn1-modules>=0.2.1
+  Downloading https://files.pythonhosted.org/packages/95/de/214830a981892a3e286c3794f41ae67a4495df1108c3da8a9f62159b9a9d/pyasn1_modules-0.2.8-py2.py3-none-any.whl (155kB)
+     |████████████████████████████████| 163kB 731kB/s
+Collecting rsa<4.1,>=3.1.4
+  Downloading https://files.pythonhosted.org/packages/02/e5/38518af393f7c214357079ce67a317307936896e961e35450b70fad2a9cf/rsa-4.0-py2.py3-none-any.whl
+Collecting requests-oauthlib>=0.7.0
+  Downloading https://files.pythonhosted.org/packages/a3/12/b92740d845ab62ea4edf04d2f4164d82532b5a0b03836d4d4e71c6f3d379/requests_oauthlib-1.3.0-py2.py3-none-any.whl
+Collecting pyasn1<0.5.0,>=0.4.6
+  Downloading https://files.pythonhosted.org/packages/62/1e/a94a8d635fa3ce4cfc7f506003548d0a2447ae76fd5ca53932970fe3053f/pyasn1-0.4.8-py2.py3-none-any.whl (77kB)
+     |████████████████████████████████| 81kB 2.6MB/s
+Collecting oauthlib>=3.0.0
+  Downloading https://files.pythonhosted.org/packages/05/57/ce2e7a8fa7c0afb54a0581b14a65b56e62b5759dbc98e80627142b8a3704/oauthlib-3.1.0-py2.py3-none-any.whl (147kB)
+     |████████████████████████████████| 153kB 819kB/s
+Building wheels for collected packages: termcolor, absl-py, gast, opt-einsum, wrapt
+  Building wheel for termcolor (setup.py) ... done
+  Created wheel for termcolor: filename=termcolor-1.1.0-cp37-none-any.whl size=4835 sha256=4f5a76c95cdbe8bb2757fce90f9297855264773eef870f99a1125bbf97e0f073
+  Stored in directory: C:\Users\Dhananjay\AppData\Local\pip\Cache\wheels\7c\06\54\bc84598ba1daf8f970247f550b175aaaee85f68b4b0c5ab2c6
+  Building wheel for absl-py (setup.py) ... done
+  Created wheel for absl-py: filename=absl_py-0.9.0-cp37-none-any.whl size=121936 sha256=f29a8890e6ee4aafdb73944517932194ede1bc6ceabb46caae0aedb563b5354f
+  Stored in directory: C:\Users\Dhananjay\AppData\Local\pip\Cache\wheels\8e\28\49\fad4e7f0b9a1227708cbbee4487ac8558a7334849cb81c813d
+  Building wheel for gast (setup.py) ... done
+  Created wheel for gast: filename=gast-0.2.2-cp37-none-any.whl size=7546 sha256=7b6ce078499e03ac13e4c654ba4cb12b8eff77289760ff09b012062e7e2fd90d
+  Stored in directory: C:\Users\Dhananjay\AppData\Local\pip\Cache\wheels\5c\2e\7e\a1d4d4fcebe6c381f378ce7743a3ced3699feb89bcfbdadadd
+  Building wheel for opt-einsum (setup.py) ... done
+  Created wheel for opt-einsum: filename=opt_einsum-3.1.0-cp37-none-any.whl size=61701 sha256=abf15df61f0965b62b21944c021a937aa2bab8ed5173080499e35d3df334343f
+  Stored in directory: C:\Users\Dhananjay\AppData\Local\pip\Cache\wheels\2c\b1\94\43d03e130b929aae7ba3f8d15cbd7bc0d1cb5bb38a5c721833
+  Building wheel for wrapt (setup.py) ... done
+  Created wheel for wrapt: filename=wrapt-1.11.2-cp37-none-any.whl size=19597 sha256=76cd9817c177ec2d73388951ddcf15be0c4da2b94459691f106da64833ab24f0
+  Stored in directory: C:\Users\Dhananjay\AppData\Local\pip\Cache\wheels\d7\de\2e\efa132238792efb6459a96e85916ef8597fcb3d2ae51590dfd
+Successfully built termcolor absl-py gast opt-einsum wrapt
+Installing collected packages: numpy, six, h5py, keras-applications, protobuf, markdown, grpcio, urllib3, idna, chardet, requests, cachetools, pyasn1, pyasn1-modules, rsa, google-auth, werk
+zeug, oauthlib, requests-oauthlib, google-auth-oauthlib, absl-py, tensorboard, termcolor, astor, scipy, gast, keras-preprocessing, opt-einsum, tensorflow-estimator, wrapt, google-pasta, ten
+sorflow
+Successfully installed absl-py-0.9.0 astor-0.8.1 cachetools-4.0.0 chardet-3.0.4 gast-0.2.2 google-auth-1.11.0 google-auth-oauthlib-0.4.1 google-pasta-0.1.8 grpcio-1.26.0 h5py-2.10.0 idna-2.
+8 keras-applications-1.0.8 keras-preprocessing-1.1.0 markdown-3.1.1 numpy-1.18.1 oauthlib-3.1.0 opt-einsum-3.1.0 protobuf-3.11.2 pyasn1-0.4.8 pyasn1-modules-0.2.8 requests-2.22.0 requests-o
+authlib-1.3.0 rsa-4.0 scipy-1.4.1 six-1.14.0 tensorboard-2.1.0 tensorflow-2.1.0 tensorflow-estimator-2.1.0 termcolor-1.1.0 urllib3-1.25.8 werkzeug-0.16.0 wrapt-1.11.2
+
+(facerecog) C:\Users\Dhananjay\Downloads\FaceIdentification_final-20200124T183104Z-001\FaceIdentification_final>pip install mtcnn
+Collecting mtcnn
+  Downloading https://files.pythonhosted.org/packages/67/43/abee91792797c609c1bf30f1112117f7a87a713ebaa6ec5201d5555a73ef/mtcnn-0.1.0-py3-none-any.whl (2.3MB)
+     |████████████████████████████████| 2.3MB 1.3MB/s
+Collecting opencv-python>=4.1.0
+  Downloading https://files.pythonhosted.org/packages/74/41/b01f308ca4a22c8c368ed4ee80ef5318efe2f221cd0024a3a0ee9df6a94d/opencv_python-4.1.2.30-cp37-cp37m-win_amd64.whl (33.0MB)
+     |████████████████████████████████| 33.0MB 1.3MB/s
+Collecting keras>=2.0.0
+  Downloading https://files.pythonhosted.org/packages/ad/fd/6bfe87920d7f4fd475acd28500a42482b6b84479832bdc0fe9e589a60ceb/Keras-2.3.1-py2.py3-none-any.whl (377kB)
+     |████████████████████████████████| 378kB 467kB/s
+Requirement already satisfied: numpy>=1.14.5 in c:\users\dhananjay\anaconda3\envs\facerecog\lib\site-packages (from opencv-python>=4.1.0->mtcnn) (1.18.1)
+Requirement already satisfied: six>=1.9.0 in c:\users\dhananjay\anaconda3\envs\facerecog\lib\site-packages (from keras>=2.0.0->mtcnn) (1.14.0)
+Requirement already satisfied: keras-applications>=1.0.6 in c:\users\dhananjay\anaconda3\envs\facerecog\lib\site-packages (from keras>=2.0.0->mtcnn) (1.0.8)
+Requirement already satisfied: scipy>=0.14 in c:\users\dhananjay\anaconda3\envs\facerecog\lib\site-packages (from keras>=2.0.0->mtcnn) (1.4.1)
+Requirement already satisfied: keras-preprocessing>=1.0.5 in c:\users\dhananjay\anaconda3\envs\facerecog\lib\site-packages (from keras>=2.0.0->mtcnn) (1.1.0)
+Requirement already satisfied: h5py in c:\users\dhananjay\anaconda3\envs\facerecog\lib\site-packages (from keras>=2.0.0->mtcnn) (2.10.0)
+Collecting pyyaml
+  Downloading https://files.pythonhosted.org/packages/9e/9c/d4865f9b24c7cfe83181e892ec5ade1435cde46bc606bb5ac2b297d75c38/PyYAML-5.3-cp37-cp37m-win_amd64.whl (215kB)
+     |████████████████████████████████| 225kB 726kB/s
+Installing collected packages: opencv-python, pyyaml, keras, mtcnn
+Successfully installed keras-2.3.1 mtcnn-0.1.0 opencv-python-4.1.2.30 pyyaml-5.3
+
+(facerecog) C:\Users\Dhananjay\Downloads\FaceIdentification_final-20200124T183104Z-001\FaceIdentification_final>python create_dataset.py
+Traceback (most recent call last):
+  File "C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorflow_core\python\pywrap_tensorflow.py", line 58, in <module>
+    from tensorflow.python.pywrap_tensorflow_internal import *
+  File "C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorflow_core\python\pywrap_tensorflow_internal.py", line 28, in <module>
+    _pywrap_tensorflow_internal = swig_import_helper()
+  File "C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorflow_core\python\pywrap_tensorflow_internal.py", line 24, in swig_import_helper
+    _mod = imp.load_module('_pywrap_tensorflow_internal', fp, pathname, description)
+  File "C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\imp.py", line 242, in load_module
+    return load_dynamic(name, filename, file)
+  File "C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\imp.py", line 342, in load_dynamic
+    return _load(spec)
+ImportError: DLL load failed: The specified module could not be found.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "create_dataset.py", line 1, in <module>
+    import tensorflow as tf
+  File "C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorflow\__init__.py", line 101, in <module>
+    from tensorflow_core import *
+  File "C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorflow_core\__init__.py", line 40, in <module>
+    from tensorflow.python.tools import module_util as _module_util
+  File "C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorflow\__init__.py", line 50, in __getattr__
+    module = self._load()
+  File "C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorflow\__init__.py", line 44, in _load
+    module = _importlib.import_module(self.__name__)
+  File "C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\importlib\__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorflow_core\python\__init__.py", line 49, in <module>
+    from tensorflow.python import pywrap_tensorflow
+  File "C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorflow_core\python\pywrap_tensorflow.py", line 74, in <module>
+    raise ImportError(msg)
+ImportError: Traceback (most recent call last):
+  File "C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorflow_core\python\pywrap_tensorflow.py", line 58, in <module>
+    from tensorflow.python.pywrap_tensorflow_internal import *
+  File "C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorflow_core\python\pywrap_tensorflow_internal.py", line 28, in <module>
+    _pywrap_tensorflow_internal = swig_import_helper()
+  File "C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorflow_core\python\pywrap_tensorflow_internal.py", line 24, in swig_import_helper
+    _mod = imp.load_module('_pywrap_tensorflow_internal', fp, pathname, description)
+  File "C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\imp.py", line 242, in load_module
+    return load_dynamic(name, filename, file)
+  File "C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\imp.py", line 342, in load_dynamic
+    return _load(spec)
+ImportError: DLL load failed: The specified module could not be found.
+
+
+Failed to load the native TensorFlow runtime.
+
+See https://www.tensorflow.org/install/errors
+
+for some common reasons and solutions.  Include the entire stack trace
+above this error message when asking for help.
+
+(facerecog) C:\Users\Dhananjay\Downloads\FaceIdentification_final-20200124T183104Z-001\FaceIdentification_final>pip install tensorflow
+Requirement already satisfied: tensorflow in c:\users\dhananjay\anaconda3\envs\facerecog\lib\site-packages (2.1.0)
+Requirement already satisfied: google-pasta>=0.1.6 in c:\users\dhananjay\anaconda3\envs\facerecog\lib\site-packages (from tensorflow) (0.1.8)
+Requirement already satisfied: numpy<2.0,>=1.16.0 in c:\users\dhananjay\anaconda3\envs\facerecog\lib\site-packages (from tensorflow) (1.18.1)
+Requirement already satisfied: astor>=0.6.0 in c:\users\dhananjay\anaconda3\envs\facerecog\lib\site-packages (from tensorflow) (0.8.1)
+Requirement already satisfied: scipy==1.4.1; python_version >= "3" in c:\users\dhananjay\anaconda3\envs\facerecog\lib\site-packages (from tensorflow) (1.4.1)
+Requirement already satisfied: grpcio>=1.8.6 in c:\users\dhananjay\anaconda3\envs\facerecog\lib\site-packages (from tensorflow) (1.26.0)
+Requirement already satisfied: tensorflow-estimator<2.2.0,>=2.1.0rc0 in c:\users\dhananjay\anaconda3\envs\facerecog\lib\site-packages (from tensorflow) (2.1.0)
+Requirement already satisfied: keras-preprocessing>=1.1.0 in c:\users\dhananjay\anaconda3\envs\facerecog\lib\site-packages (from tensorflow) (1.1.0)
+Requirement already satisfied: termcolor>=1.1.0 in c:\users\dhananjay\anaconda3\envs\facerecog\lib\site-packages (from tensorflow) (1.1.0)
+Requirement already satisfied: wrapt>=1.11.1 in c:\users\dhananjay\anaconda3\envs\facerecog\lib\site-packages (from tensorflow) (1.11.2)
+Requirement already satisfied: six>=1.12.0 in c:\users\dhananjay\anaconda3\envs\facerecog\lib\site-packages (from tensorflow) (1.14.0)
+Requirement already satisfied: opt-einsum>=2.3.2 in c:\users\dhananjay\anaconda3\envs\facerecog\lib\site-packages (from tensorflow) (3.1.0)
+Requirement already satisfied: absl-py>=0.7.0 in c:\users\dhananjay\anaconda3\envs\facerecog\lib\site-packages (from tensorflow) (0.9.0)
+Requirement already satisfied: protobuf>=3.8.0 in c:\users\dhananjay\anaconda3\envs\facerecog\lib\site-packages (from tensorflow) (3.11.2)
+Requirement already satisfied: wheel>=0.26; python_version >= "3" in c:\users\dhananjay\anaconda3\envs\facerecog\lib\site-packages (from tensorflow) (0.33.6)
+Requirement already satisfied: gast==0.2.2 in c:\users\dhananjay\anaconda3\envs\facerecog\lib\site-packages (from tensorflow) (0.2.2)
+Requirement already satisfied: tensorboard<2.2.0,>=2.1.0 in c:\users\dhananjay\anaconda3\envs\facerecog\lib\site-packages (from tensorflow) (2.1.0)
+Requirement already satisfied: keras-applications>=1.0.8 in c:\users\dhananjay\anaconda3\envs\facerecog\lib\site-packages (from tensorflow) (1.0.8)
+Requirement already satisfied: setuptools in c:\users\dhananjay\anaconda3\envs\facerecog\lib\site-packages (from protobuf>=3.8.0->tensorflow) (44.0.0.post20200106)
+Requirement already satisfied: google-auth-oauthlib<0.5,>=0.4.1 in c:\users\dhananjay\anaconda3\envs\facerecog\lib\site-packages (from tensorboard<2.2.0,>=2.1.0->tensorflow) (0.4.1)
+Requirement already satisfied: google-auth<2,>=1.6.3 in c:\users\dhananjay\anaconda3\envs\facerecog\lib\site-packages (from tensorboard<2.2.0,>=2.1.0->tensorflow) (1.11.0)
+Requirement already satisfied: requests<3,>=2.21.0 in c:\users\dhananjay\anaconda3\envs\facerecog\lib\site-packages (from tensorboard<2.2.0,>=2.1.0->tensorflow) (2.22.0)
+Requirement already satisfied: werkzeug>=0.11.15 in c:\users\dhananjay\anaconda3\envs\facerecog\lib\site-packages (from tensorboard<2.2.0,>=2.1.0->tensorflow) (0.16.0)
+Requirement already satisfied: markdown>=2.6.8 in c:\users\dhananjay\anaconda3\envs\facerecog\lib\site-packages (from tensorboard<2.2.0,>=2.1.0->tensorflow) (3.1.1)
+Requirement already satisfied: h5py in c:\users\dhananjay\anaconda3\envs\facerecog\lib\site-packages (from keras-applications>=1.0.8->tensorflow) (2.10.0)
+Requirement already satisfied: requests-oauthlib>=0.7.0 in c:\users\dhananjay\anaconda3\envs\facerecog\lib\site-packages (from google-auth-oauthlib<0.5,>=0.4.1->tensorboard<2.2.0,>=2.1.0->t
+ensorflow) (1.3.0)
+Requirement already satisfied: rsa<4.1,>=3.1.4 in c:\users\dhananjay\anaconda3\envs\facerecog\lib\site-packages (from google-auth<2,>=1.6.3->tensorboard<2.2.0,>=2.1.0->tensorflow) (4.0)
+Requirement already satisfied: cachetools<5.0,>=2.0.0 in c:\users\dhananjay\anaconda3\envs\facerecog\lib\site-packages (from google-auth<2,>=1.6.3->tensorboard<2.2.0,>=2.1.0->tensorflow) (4
+.0.0)
+Requirement already satisfied: pyasn1-modules>=0.2.1 in c:\users\dhananjay\anaconda3\envs\facerecog\lib\site-packages (from google-auth<2,>=1.6.3->tensorboard<2.2.0,>=2.1.0->tensorflow) (0.
+2.8)
+Requirement already satisfied: chardet<3.1.0,>=3.0.2 in c:\users\dhananjay\anaconda3\envs\facerecog\lib\site-packages (from requests<3,>=2.21.0->tensorboard<2.2.0,>=2.1.0->tensorflow) (3.0.
+4)
+Requirement already satisfied: idna<2.9,>=2.5 in c:\users\dhananjay\anaconda3\envs\facerecog\lib\site-packages (from requests<3,>=2.21.0->tensorboard<2.2.0,>=2.1.0->tensorflow) (2.8)
+Requirement already satisfied: certifi>=2017.4.17 in c:\users\dhananjay\anaconda3\envs\facerecog\lib\site-packages (from requests<3,>=2.21.0->tensorboard<2.2.0,>=2.1.0->tensorflow) (2019.11
+.28)
+Requirement already satisfied: urllib3!=1.25.0,!=1.25.1,<1.26,>=1.21.1 in c:\users\dhananjay\anaconda3\envs\facerecog\lib\site-packages (from requests<3,>=2.21.0->tensorboard<2.2.0,>=2.1.0-
+>tensorflow) (1.25.8)
+Requirement already satisfied: oauthlib>=3.0.0 in c:\users\dhananjay\anaconda3\envs\facerecog\lib\site-packages (from requests-oauthlib>=0.7.0->google-auth-oauthlib<0.5,>=0.4.1->tensorboard
+<2.2.0,>=2.1.0->tensorflow) (3.1.0)
+Requirement already satisfied: pyasn1>=0.1.3 in c:\users\dhananjay\anaconda3\envs\facerecog\lib\site-packages (from rsa<4.1,>=3.1.4->google-auth<2,>=1.6.3->tensorboard<2.2.0,>=2.1.0->tensor
+flow) (0.4.8)
+
+(facerecog) C:\Users\Dhananjay\Downloads\FaceIdentification_final-20200124T183104Z-001\FaceIdentification_final>
+Microsoft Windows [Version 10.0.18363.592]
+(c) 2019 Microsoft Corporation. All rights reserved.
+
+(base) C:\Users\Dhananjay\Downloads\FaceIdentification_final-20200124T183104Z-001\FaceIdentification_final>conda activate facerecog
+
+(facerecog) C:\Users\Dhananjay\Downloads\FaceIdentification_final-20200124T183104Z-001\FaceIdentification_final>python create_dataset.py
+Traceback (most recent call last):
+  File "C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorflow_core\python\pywrap_tensorflow.py", line 58, in <module>
+    from tensorflow.python.pywrap_tensorflow_internal import *
+  File "C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorflow_core\python\pywrap_tensorflow_internal.py", line 28, in <module>
+    _pywrap_tensorflow_internal = swig_import_helper()
+  File "C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorflow_core\python\pywrap_tensorflow_internal.py", line 24, in swig_import_helper
+    _mod = imp.load_module('_pywrap_tensorflow_internal', fp, pathname, description)
+  File "C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\imp.py", line 242, in load_module
+    return load_dynamic(name, filename, file)
+  File "C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\imp.py", line 342, in load_dynamic
+    return _load(spec)
+ImportError: DLL load failed: The specified module could not be found.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "create_dataset.py", line 1, in <module>
+    import tensorflow as tf
+  File "C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorflow\__init__.py", line 101, in <module>
+    from tensorflow_core import *
+  File "C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorflow_core\__init__.py", line 40, in <module>
+    from tensorflow.python.tools import module_util as _module_util
+  File "C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorflow\__init__.py", line 50, in __getattr__
+    module = self._load()
+  File "C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorflow\__init__.py", line 44, in _load
+    module = _importlib.import_module(self.__name__)
+  File "C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\importlib\__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorflow_core\python\__init__.py", line 49, in <module>
+    from tensorflow.python import pywrap_tensorflow
+  File "C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorflow_core\python\pywrap_tensorflow.py", line 74, in <module>
+    raise ImportError(msg)
+ImportError: Traceback (most recent call last):
+  File "C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorflow_core\python\pywrap_tensorflow.py", line 58, in <module>
+    from tensorflow.python.pywrap_tensorflow_internal import *
+  File "C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorflow_core\python\pywrap_tensorflow_internal.py", line 28, in <module>
+    _pywrap_tensorflow_internal = swig_import_helper()
+  File "C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorflow_core\python\pywrap_tensorflow_internal.py", line 24, in swig_import_helper
+    _mod = imp.load_module('_pywrap_tensorflow_internal', fp, pathname, description)
+  File "C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\imp.py", line 242, in load_module
+    return load_dynamic(name, filename, file)
+  File "C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\imp.py", line 342, in load_dynamic
+    return _load(spec)
+ImportError: DLL load failed: The specified module could not be found.
+
+
+Failed to load the native TensorFlow runtime.
+
+See https://www.tensorflow.org/install/errors
+
+for some common reasons and solutions.  Include the entire stack trace
+above this error message when asking for help.
+
+(facerecog) C:\Users\Dhananjay\Downloads\FaceIdentification_final-20200124T183104Z-001\FaceIdentification_final>pip uninstall tensorflow
+Uninstalling tensorflow-2.1.0:
+  Would remove:
+    c:\users\dhananjay\anaconda3\envs\facerecog\lib\site-packages\tensorflow-2.1.0.dist-info\*
+    c:\users\dhananjay\anaconda3\envs\facerecog\lib\site-packages\tensorflow\*
+    c:\users\dhananjay\anaconda3\envs\facerecog\lib\site-packages\tensorflow_core\*
+    c:\users\dhananjay\anaconda3\envs\facerecog\scripts\estimator_ckpt_converter.exe
+    c:\users\dhananjay\anaconda3\envs\facerecog\scripts\saved_model_cli.exe
+    c:\users\dhananjay\anaconda3\envs\facerecog\scripts\tensorboard.exe
+    c:\users\dhananjay\anaconda3\envs\facerecog\scripts\tf_upgrade_v2.exe
+    c:\users\dhananjay\anaconda3\envs\facerecog\scripts\tflite_convert.exe
+    c:\users\dhananjay\anaconda3\envs\facerecog\scripts\toco.exe
+    c:\users\dhananjay\anaconda3\envs\facerecog\scripts\toco_from_protos.exe
+Proceed (y/n)? y
+  Successfully uninstalled tensorflow-2.1.0
+
+(facerecog) C:\Users\Dhananjay\Downloads\FaceIdentification_final-20200124T183104Z-001\FaceIdentification_final>pip install tensorflow==1.14
+Collecting tensorflow==1.14
+  Downloading https://files.pythonhosted.org/packages/f7/08/25e47a53692c2e0dcd2211a493ddfe9007a5cd92e175d6dffa6169a0b392/tensorflow-1.14.0-cp37-cp37m-win_amd64.whl (68.3MB)
+     |██████████████▌                 | 31.2MB 25kB/s eta 0:24:33ERROR: Exception:
+Traceback (most recent call last):
+  File "C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\pip\_vendor\urllib3\response.py", line 425, in _error_catcher
+    yield
+  File "C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\pip\_vendor\urllib3\response.py", line 507, in read
+    data = self._fp.read(amt) if not fp_closed else b""
+  File "C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\pip\_vendor\cachecontrol\filewrapper.py", line 62, in read
+    data = self.__fp.read(amt)
+  File "C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\http\client.py", line 457, in read
+    n = self.readinto(b)
+  File "C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\http\client.py", line 501, in readinto
+    n = self.fp.readinto(b)
+  File "C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+  File "C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\ssl.py", line 1071, in recv_into
+    return self.read(nbytes, buffer)
+  File "C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\ssl.py", line 929, in read
+    return self._sslobj.read(len, buffer)
+socket.timeout: The read operation timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\pip\_internal\cli\base_command.py", line 153, in _main
+    status = self.run(options, args)
+  File "C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\pip\_internal\commands\install.py", line 382, in run
+    resolver.resolve(requirement_set)
+  File "C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\pip\_internal\legacy_resolve.py", line 201, in resolve
+    self._resolve_one(requirement_set, req)
+  File "C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\pip\_internal\legacy_resolve.py", line 365, in _resolve_one
+    abstract_dist = self._get_abstract_dist_for(req_to_install)
+  File "C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\pip\_internal\legacy_resolve.py", line 313, in _get_abstract_dist_for
+    req, self.session, self.finder, self.require_hashes
+  File "C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\pip\_internal\operations\prepare.py", line 194, in prepare_linked_requirement
+    progress_bar=self.progress_bar
+  File "C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\pip\_internal\download.py", line 465, in unpack_url
+    progress_bar=progress_bar
+  File "C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\pip\_internal\download.py", line 316, in unpack_http_url
+    progress_bar)
+  File "C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\pip\_internal\download.py", line 551, in _download_http_url
+    _download_url(resp, link, content_file, hashes, progress_bar)
+  File "C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\pip\_internal\download.py", line 253, in _download_url
+    hashes.check_against_chunks(downloaded_chunks)
+  File "C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\pip\_internal\utils\hashes.py", line 80, in check_against_chunks
+    for chunk in chunks:
+  File "C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\pip\_internal\download.py", line 223, in written_chunks
+    for chunk in chunks:
+  File "C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\pip\_internal\utils\ui.py", line 160, in iter
+    for x in it:
+  File "C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\pip\_internal\download.py", line 212, in resp_read
+    decode_content=False):
+  File "C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\pip\_vendor\urllib3\response.py", line 564, in stream
+    data = self.read(amt=amt, decode_content=decode_content)
+  File "C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\pip\_vendor\urllib3\response.py", line 529, in read
+    raise IncompleteRead(self._fp_bytes_read, self.length_remaining)
+  File "C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\contextlib.py", line 130, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\pip\_vendor\urllib3\response.py", line 430, in _error_catcher
+    raise ReadTimeoutError(self._pool, None, "Read timed out.")
+pip._vendor.urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='files.pythonhosted.org', port=443): Read timed out.
+
+(facerecog) C:\Users\Dhananjay\Downloads\FaceIdentification_final-20200124T183104Z-001\FaceIdentification_final>pip install tensorflow==1.14
+Collecting tensorflow==1.14
+  Downloading https://files.pythonhosted.org/packages/f7/08/25e47a53692c2e0dcd2211a493ddfe9007a5cd92e175d6dffa6169a0b392/tensorflow-1.14.0-cp37-cp37m-win_amd64.whl (68.3MB)
+     |████                            | 8.4MB 29kB/s eta 0:33:41ERROR: Exception:
+Traceback (most recent call last):
+  File "C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\pip\_vendor\urllib3\response.py", line 425, in _error_catcher
+    yield
+  File "C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\pip\_vendor\urllib3\response.py", line 507, in read
+    data = self._fp.read(amt) if not fp_closed else b""
+  File "C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\pip\_vendor\cachecontrol\filewrapper.py", line 62, in read
+    data = self.__fp.read(amt)
+  File "C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\http\client.py", line 457, in read
+    n = self.readinto(b)
+  File "C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\http\client.py", line 501, in readinto
+    n = self.fp.readinto(b)
+  File "C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+  File "C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\ssl.py", line 1071, in recv_into
+    return self.read(nbytes, buffer)
+  File "C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\ssl.py", line 929, in read
+    return self._sslobj.read(len, buffer)
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\pip\_internal\cli\base_command.py", line 153, in _main
+    status = self.run(options, args)
+  File "C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\pip\_internal\commands\install.py", line 382, in run
+    resolver.resolve(requirement_set)
+  File "C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\pip\_internal\legacy_resolve.py", line 201, in resolve
+    self._resolve_one(requirement_set, req)
+  File "C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\pip\_internal\legacy_resolve.py", line 365, in _resolve_one
+    abstract_dist = self._get_abstract_dist_for(req_to_install)
+  File "C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\pip\_internal\legacy_resolve.py", line 313, in _get_abstract_dist_for
+    req, self.session, self.finder, self.require_hashes
+  File "C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\pip\_internal\operations\prepare.py", line 194, in prepare_linked_requirement
+    progress_bar=self.progress_bar
+  File "C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\pip\_internal\download.py", line 465, in unpack_url
+    progress_bar=progress_bar
+  File "C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\pip\_internal\download.py", line 316, in unpack_http_url
+    progress_bar)
+  File "C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\pip\_internal\download.py", line 551, in _download_http_url
+    _download_url(resp, link, content_file, hashes, progress_bar)
+  File "C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\pip\_internal\download.py", line 253, in _download_url
+    hashes.check_against_chunks(downloaded_chunks)
+  File "C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\pip\_internal\utils\hashes.py", line 80, in check_against_chunks
+    for chunk in chunks:
+  File "C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\pip\_internal\download.py", line 223, in written_chunks
+    for chunk in chunks:
+  File "C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\pip\_internal\utils\ui.py", line 160, in iter
+    for x in it:
+  File "C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\pip\_internal\download.py", line 212, in resp_read
+    decode_content=False):
+  File "C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\pip\_vendor\urllib3\response.py", line 564, in stream
+    data = self.read(amt=amt, decode_content=decode_content)
+  File "C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\pip\_vendor\urllib3\response.py", line 529, in read
+    raise IncompleteRead(self._fp_bytes_read, self.length_remaining)
+  File "C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\contextlib.py", line 130, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\pip\_vendor\urllib3\response.py", line 443, in _error_catcher
+    raise ProtocolError("Connection broken: %r" % e, e)
+pip._vendor.urllib3.exceptions.ProtocolError: ("Connection broken: ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)", Connecti
+onResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+
+(facerecog) C:\Users\Dhananjay\Downloads\FaceIdentification_final-20200124T183104Z-001\FaceIdentification_final>pip install tensorflow==1.14
+Collecting tensorflow==1.14
+  Downloading https://files.pythonhosted.org/packages/f7/08/25e47a53692c2e0dcd2211a493ddfe9007a5cd92e175d6dffa6169a0b392/tensorflow-1.14.0-cp37-cp37m-win_amd64.whl (68.3MB)
+     |████████████████████████████████| 68.3MB 297kB/s
+Requirement already satisfied: gast>=0.2.0 in c:\users\dhananjay\anaconda3\envs\facerecog\lib\site-packages (from tensorflow==1.14) (0.2.2)
+Collecting tensorflow-estimator<1.15.0rc0,>=1.14.0rc0
+  Downloading https://files.pythonhosted.org/packages/3c/d5/21860a5b11caf0678fbc8319341b0ae21a07156911132e0e71bffed0510d/tensorflow_estimator-1.14.0-py2.py3-none-any.whl (488kB)
+     |████████████████████████████████| 491kB 409kB/s
+Collecting tensorboard<1.15.0,>=1.14.0
+  Downloading https://files.pythonhosted.org/packages/91/2d/2ed263449a078cd9c8a9ba50ebd50123adf1f8cfbea1492f9084169b89d9/tensorboard-1.14.0-py3-none-any.whl (3.1MB)
+     |████████████████████████████████| 3.2MB 1.3MB/s
+Requirement already satisfied: keras-preprocessing>=1.0.5 in c:\users\dhananjay\anaconda3\envs\facerecog\lib\site-packages (from tensorflow==1.14) (1.1.0)
+Requirement already satisfied: grpcio>=1.8.6 in c:\users\dhananjay\anaconda3\envs\facerecog\lib\site-packages (from tensorflow==1.14) (1.26.0)
+Requirement already satisfied: absl-py>=0.7.0 in c:\users\dhananjay\anaconda3\envs\facerecog\lib\site-packages (from tensorflow==1.14) (0.9.0)
+Requirement already satisfied: keras-applications>=1.0.6 in c:\users\dhananjay\anaconda3\envs\facerecog\lib\site-packages (from tensorflow==1.14) (1.0.8)
+Requirement already satisfied: wheel>=0.26 in c:\users\dhananjay\anaconda3\envs\facerecog\lib\site-packages (from tensorflow==1.14) (0.33.6)
+Requirement already satisfied: six>=1.10.0 in c:\users\dhananjay\anaconda3\envs\facerecog\lib\site-packages (from tensorflow==1.14) (1.14.0)
+Requirement already satisfied: termcolor>=1.1.0 in c:\users\dhananjay\anaconda3\envs\facerecog\lib\site-packages (from tensorflow==1.14) (1.1.0)
+Requirement already satisfied: google-pasta>=0.1.6 in c:\users\dhananjay\anaconda3\envs\facerecog\lib\site-packages (from tensorflow==1.14) (0.1.8)
+Requirement already satisfied: astor>=0.6.0 in c:\users\dhananjay\anaconda3\envs\facerecog\lib\site-packages (from tensorflow==1.14) (0.8.1)
+Requirement already satisfied: numpy<2.0,>=1.14.5 in c:\users\dhananjay\anaconda3\envs\facerecog\lib\site-packages (from tensorflow==1.14) (1.18.1)
+Requirement already satisfied: wrapt>=1.11.1 in c:\users\dhananjay\anaconda3\envs\facerecog\lib\site-packages (from tensorflow==1.14) (1.11.2)
+Requirement already satisfied: protobuf>=3.6.1 in c:\users\dhananjay\anaconda3\envs\facerecog\lib\site-packages (from tensorflow==1.14) (3.11.2)
+Requirement already satisfied: werkzeug>=0.11.15 in c:\users\dhananjay\anaconda3\envs\facerecog\lib\site-packages (from tensorboard<1.15.0,>=1.14.0->tensorflow==1.14) (0.16.0)
+Requirement already satisfied: setuptools>=41.0.0 in c:\users\dhananjay\anaconda3\envs\facerecog\lib\site-packages (from tensorboard<1.15.0,>=1.14.0->tensorflow==1.14) (44.0.0.post20200106)
+
+Requirement already satisfied: markdown>=2.6.8 in c:\users\dhananjay\anaconda3\envs\facerecog\lib\site-packages (from tensorboard<1.15.0,>=1.14.0->tensorflow==1.14) (3.1.1)
+Requirement already satisfied: h5py in c:\users\dhananjay\anaconda3\envs\facerecog\lib\site-packages (from keras-applications>=1.0.6->tensorflow==1.14) (2.10.0)
+Installing collected packages: tensorflow-estimator, tensorboard, tensorflow
+  Found existing installation: tensorflow-estimator 2.1.0
+    Uninstalling tensorflow-estimator-2.1.0:
+      Successfully uninstalled tensorflow-estimator-2.1.0
+  Found existing installation: tensorboard 2.1.0
+    Uninstalling tensorboard-2.1.0:
+      Successfully uninstalled tensorboard-2.1.0
+Successfully installed tensorboard-1.14.0 tensorflow-1.14.0 tensorflow-estimator-1.14.0
+
+(facerecog) C:\Users\Dhananjay\Downloads\FaceIdentification_final-20200124T183104Z-001\FaceIdentification_final>python create_dataset.py
+C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorflow\python\framework\dtypes.py:516: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a
+ future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorflow\python\framework\dtypes.py:517: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a
+ future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorflow\python\framework\dtypes.py:518: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a
+ future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorflow\python\framework\dtypes.py:519: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a
+ future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorflow\python\framework\dtypes.py:520: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a
+ future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorflow\python\framework\dtypes.py:525: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a
+ future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorboard\compat\tensorflow_stub\dtypes.py:541: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecate
+d; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorboard\compat\tensorflow_stub\dtypes.py:542: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecate
+d; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorboard\compat\tensorflow_stub\dtypes.py:543: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecate
+d; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorboard\compat\tensorflow_stub\dtypes.py:544: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecate
+d; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorboard\compat\tensorflow_stub\dtypes.py:545: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecate
+d; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorboard\compat\tensorflow_stub\dtypes.py:550: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecate
+d; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+Using TensorFlow backend.
+Traceback (most recent call last):
+  File "create_dataset.py", line 3, in <module>
+    from matplotlib import pyplot
+ModuleNotFoundError: No module named 'matplotlib'
+
+(facerecog) C:\Users\Dhananjay\Downloads\FaceIdentification_final-20200124T183104Z-001\FaceIdentification_final>pip install matplotlib
+Collecting matplotlib
+  Downloading https://files.pythonhosted.org/packages/dd/73/dc25ca27a9960539ef984921b0d42368445b856ae0861c3acba542b9a39c/matplotlib-3.1.2-cp37-cp37m-win_amd64.whl (9.1MB)
+     |████████████████████████████████| 9.1MB 1.3MB/s
+Collecting pyparsing!=2.0.4,!=2.1.2,!=2.1.6,>=2.0.1
+  Downloading https://files.pythonhosted.org/packages/5d/bc/1e58593167fade7b544bfe9502a26dc860940a79ab306e651e7f13be68c2/pyparsing-2.4.6-py2.py3-none-any.whl (67kB)
+     |████████████████████████████████| 71kB 1.5MB/s
+Collecting python-dateutil>=2.1
+  Downloading https://files.pythonhosted.org/packages/d4/70/d60450c3dd48ef87586924207ae8907090de0b306af2bce5d134d78615cb/python_dateutil-2.8.1-py2.py3-none-any.whl (227kB)
+     |████████████████████████████████| 235kB 6.4MB/s
+Requirement already satisfied: numpy>=1.11 in c:\users\dhananjay\anaconda3\envs\facerecog\lib\site-packages (from matplotlib) (1.18.1)
+Collecting kiwisolver>=1.0.1
+  Downloading https://files.pythonhosted.org/packages/c6/ea/e5474014a13ab2dcb5056608e0716c600c3d8a8bcffb10ed55ccd6a42eb0/kiwisolver-1.1.0-cp37-none-win_amd64.whl (57kB)
+     |████████████████████████████████| 61kB 3.8MB/s
+Collecting cycler>=0.10
+  Downloading https://files.pythonhosted.org/packages/f7/d2/e07d3ebb2bd7af696440ce7e754c59dd546ffe1bbe732c8ab68b9c834e61/cycler-0.10.0-py2.py3-none-any.whl
+Requirement already satisfied: six>=1.5 in c:\users\dhananjay\anaconda3\envs\facerecog\lib\site-packages (from python-dateutil>=2.1->matplotlib) (1.14.0)
+Requirement already satisfied: setuptools in c:\users\dhananjay\anaconda3\envs\facerecog\lib\site-packages (from kiwisolver>=1.0.1->matplotlib) (44.0.0.post20200106)
+Installing collected packages: pyparsing, python-dateutil, kiwisolver, cycler, matplotlib
+Successfully installed cycler-0.10.0 kiwisolver-1.1.0 matplotlib-3.1.2 pyparsing-2.4.6 python-dateutil-2.8.1
+
+(facerecog) C:\Users\Dhananjay\Downloads\FaceIdentification_final-20200124T183104Z-001\FaceIdentification_final>pip install matplotlib
+Requirement already satisfied: matplotlib in c:\users\dhananjay\anaconda3\envs\facerecog\lib\site-packages (3.1.2)
+Requirement already satisfied: pyparsing!=2.0.4,!=2.1.2,!=2.1.6,>=2.0.1 in c:\users\dhananjay\anaconda3\envs\facerecog\lib\site-packages (from matplotlib) (2.4.6)
+Requirement already satisfied: numpy>=1.11 in c:\users\dhananjay\anaconda3\envs\facerecog\lib\site-packages (from matplotlib) (1.18.1)
+Requirement already satisfied: cycler>=0.10 in c:\users\dhananjay\anaconda3\envs\facerecog\lib\site-packages (from matplotlib) (0.10.0)
+Requirement already satisfied: python-dateutil>=2.1 in c:\users\dhananjay\anaconda3\envs\facerecog\lib\site-packages (from matplotlib) (2.8.1)
+Requirement already satisfied: kiwisolver>=1.0.1 in c:\users\dhananjay\anaconda3\envs\facerecog\lib\site-packages (from matplotlib) (1.1.0)
+Requirement already satisfied: six in c:\users\dhananjay\anaconda3\envs\facerecog\lib\site-packages (from cycler>=0.10->matplotlib) (1.14.0)
+Requirement already satisfied: setuptools in c:\users\dhananjay\anaconda3\envs\facerecog\lib\site-packages (from kiwisolver>=1.0.1->matplotlib) (44.0.0.post20200106)
+
+(facerecog) C:\Users\Dhananjay\Downloads\FaceIdentification_final-20200124T183104Z-001\FaceIdentification_final>python create_dataset.py
+C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorflow\python\framework\dtypes.py:516: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a
+ future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorflow\python\framework\dtypes.py:517: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a
+ future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorflow\python\framework\dtypes.py:518: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a
+ future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorflow\python\framework\dtypes.py:519: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a
+ future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorflow\python\framework\dtypes.py:520: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a
+ future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorflow\python\framework\dtypes.py:525: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a
+ future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorboard\compat\tensorflow_stub\dtypes.py:541: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecate
+d; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorboard\compat\tensorflow_stub\dtypes.py:542: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecate
+d; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorboard\compat\tensorflow_stub\dtypes.py:543: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecate
+d; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorboard\compat\tensorflow_stub\dtypes.py:544: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecate
+d; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorboard\compat\tensorflow_stub\dtypes.py:545: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecate
+d; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorboard\compat\tensorflow_stub\dtypes.py:550: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecate
+d; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+Using TensorFlow backend.
+Traceback (most recent call last):
+  File "create_dataset.py", line 7, in <module>
+    from PIL import Image
+ModuleNotFoundError: No module named 'PIL'
+
+(facerecog) C:\Users\Dhananjay\Downloads\FaceIdentification_final-20200124T183104Z-001\FaceIdentification_final>pip install PIL
+ERROR: Could not find a version that satisfies the requirement PIL (from versions: none)
+ERROR: No matching distribution found for PIL
+
+(facerecog) C:\Users\Dhananjay\Downloads\FaceIdentification_final-20200124T183104Z-001\FaceIdentification_final>pip install Pillow
+Collecting Pillow
+  Downloading https://files.pythonhosted.org/packages/88/6b/66f502b5ea615f69433ae1e23ec786b2cdadbe41a5cfb1e1fabb4f9c6ce9/Pillow-7.0.0-cp37-cp37m-win_amd64.whl (2.0MB)
+     |████████████████████████████████| 2.0MB 819kB/s
+Installing collected packages: Pillow
+Successfully installed Pillow-7.0.0
+
+(facerecog) C:\Users\Dhananjay\Downloads\FaceIdentification_final-20200124T183104Z-001\FaceIdentification_final>python create_dataset.py
+C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorflow\python\framework\dtypes.py:516: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a
+ future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorflow\python\framework\dtypes.py:517: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a
+ future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorflow\python\framework\dtypes.py:518: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a
+ future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorflow\python\framework\dtypes.py:519: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a
+ future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorflow\python\framework\dtypes.py:520: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a
+ future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorflow\python\framework\dtypes.py:525: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a
+ future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorboard\compat\tensorflow_stub\dtypes.py:541: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecate
+d; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorboard\compat\tensorflow_stub\dtypes.py:542: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecate
+d; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorboard\compat\tensorflow_stub\dtypes.py:543: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecate
+d; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorboard\compat\tensorflow_stub\dtypes.py:544: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecate
+d; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorboard\compat\tensorflow_stub\dtypes.py:545: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecate
+d; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorboard\compat\tensorflow_stub\dtypes.py:550: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecate
+d; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+Using TensorFlow backend.
+>loaded 2 examples for class: 1
+(2, 160, 160, 3) (2,)
+>loaded 2 examples for class: 1
+(2, 160, 160, 3) (2,)
+
+(facerecog) C:\Users\Dhananjay\Downloads\FaceIdentification_final-20200124T183104Z-001\FaceIdentification_final>python create_face_embeddings.py
+Using TensorFlow backend.
+C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorflow\python\framework\dtypes.py:516: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a
+ future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorflow\python\framework\dtypes.py:517: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a
+ future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorflow\python\framework\dtypes.py:518: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a
+ future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorflow\python\framework\dtypes.py:519: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a
+ future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorflow\python\framework\dtypes.py:520: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a
+ future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorflow\python\framework\dtypes.py:525: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a
+ future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorboard\compat\tensorflow_stub\dtypes.py:541: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecate
+d; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorboard\compat\tensorflow_stub\dtypes.py:542: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecate
+d; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorboard\compat\tensorflow_stub\dtypes.py:543: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecate
+d; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorboard\compat\tensorflow_stub\dtypes.py:544: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecate
+d; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorboard\compat\tensorflow_stub\dtypes.py:545: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecate
+d; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorboard\compat\tensorflow_stub\dtypes.py:550: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecate
+d; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+Loaded :  (2, 160, 160, 3) (2,) (2, 160, 160, 3) (2,)
+WARNING:tensorflow:From C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\keras\backend\tensorflow_backend.py:4070: The name tf.nn.max_pool is deprecated. Please use tf.nn.max_p
+ool2d instead.
+
+C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\keras\engine\saving.py:341: UserWarning: No training configuration found in save file: the model was *not* compiled. Compile it
+ manually.
+  warnings.warn('No training configuration found in save file: '
+Facenet Model Loaded
+WARNING:tensorflow:From C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\keras\backend\tensorflow_backend.py:422: The name tf.global_variables is deprecated. Please use tf.comp
+at.v1.global_variables instead.
+
+(2, 128)
+(2, 128)
+
+(facerecog) C:\Users\Dhananjay\Downloads\FaceIdentification_final-20200124T183104Z-001\FaceIdentification_final>python classify_webcam_faces.py
+python: can't open file 'classify_webcam_faces.py': [Errno 2] No such file or directory
+
+(facerecog) C:\Users\Dhananjay\Downloads\FaceIdentification_final-20200124T183104Z-001\FaceIdentification_final>python classify_webcam.py
+Traceback (most recent call last):
+  File "classify_webcam.py", line 4, in <module>
+    from sklearn.preprocessing import LabelEncoder
+ModuleNotFoundError: No module named 'sklearn'
+
+(facerecog) C:\Users\Dhananjay\Downloads\FaceIdentification_final-20200124T183104Z-001\FaceIdentification_final>pip install sklearn
+Collecting sklearn
+  Downloading https://files.pythonhosted.org/packages/1e/7a/dbb3be0ce9bd5c8b7e3d87328e79063f8b263b2b1bfa4774cb1147bfcd3f/sklearn-0.0.tar.gz
+Collecting scikit-learn
+  Downloading https://files.pythonhosted.org/packages/f8/d0/5b7088d1fb891596c34c8b09414cd3daef99876349dd686a3ad536cf9820/scikit_learn-0.22.1-cp37-cp37m-win_amd64.whl (6.3MB)
+     |████████████████████████████████| 6.3MB 242kB/s
+Collecting joblib>=0.11
+  Downloading https://files.pythonhosted.org/packages/28/5c/cf6a2b65a321c4a209efcdf64c2689efae2cb62661f8f6f4bb28547cf1bf/joblib-0.14.1-py2.py3-none-any.whl (294kB)
+     |████████████████████████████████| 296kB 6.4MB/s
+Requirement already satisfied: scipy>=0.17.0 in c:\users\dhananjay\anaconda3\envs\facerecog\lib\site-packages (from scikit-learn->sklearn) (1.4.1)
+Requirement already satisfied: numpy>=1.11.0 in c:\users\dhananjay\anaconda3\envs\facerecog\lib\site-packages (from scikit-learn->sklearn) (1.18.1)
+Building wheels for collected packages: sklearn
+  Building wheel for sklearn (setup.py) ... done
+  Created wheel for sklearn: filename=sklearn-0.0-py2.py3-none-any.whl size=1321 sha256=cd086f4875092484d3aa29eeebd26374abfe9c19f82cbb498df9ba7a7102b667
+  Stored in directory: C:\Users\Dhananjay\AppData\Local\pip\Cache\wheels\76\03\bb\589d421d27431bcd2c6da284d5f2286c8e3b2ea3cf1594c074
+Successfully built sklearn
+Installing collected packages: joblib, scikit-learn, sklearn
+Successfully installed joblib-0.14.1 scikit-learn-0.22.1 sklearn-0.0
+
+(facerecog) C:\Users\Dhananjay\Downloads\FaceIdentification_final-20200124T183104Z-001\FaceIdentification_final>python classify_webcam.py
+Using TensorFlow backend.
+C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorflow\python\framework\dtypes.py:516: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a
+ future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorflow\python\framework\dtypes.py:517: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a
+ future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorflow\python\framework\dtypes.py:518: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a
+ future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorflow\python\framework\dtypes.py:519: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a
+ future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorflow\python\framework\dtypes.py:520: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a
+ future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorflow\python\framework\dtypes.py:525: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a
+ future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorboard\compat\tensorflow_stub\dtypes.py:541: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecate
+d; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorboard\compat\tensorflow_stub\dtypes.py:542: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecate
+d; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorboard\compat\tensorflow_stub\dtypes.py:543: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecate
+d; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorboard\compat\tensorflow_stub\dtypes.py:544: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecate
+d; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorboard\compat\tensorflow_stub\dtypes.py:545: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecate
+d; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorboard\compat\tensorflow_stub\dtypes.py:550: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecate
+d; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+WARNING:tensorflow:From C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\keras\backend\tensorflow_backend.py:4070: The name tf.nn.max_pool is deprecated. Please use tf.nn.max_p
+ool2d instead.
+
+C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\keras\engine\saving.py:341: UserWarning: No training configuration found in save file: the model was *not* compiled. Compile it
+ manually.
+  warnings.warn('No training configuration found in save file: '
+Traceback (most recent call last):
+  File "classify_webcam.py", line 65, in <module>
+    model.fit(trainX, trainY)
+  File "C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\sklearn\svm\_base.py", line 149, in fit
+    y = self._validate_targets(y)
+  File "C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\sklearn\svm\_base.py", line 531, in _validate_targets
+    " class" % len(cls))
+ValueError: The number of classes has to be greater than one; got 1 class
+
+(facerecog) C:\Users\Dhananjay\Downloads\FaceIdentification_final-20200124T183104Z-001\FaceIdentification_final>python create_dataset.py
+C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorflow\python\framework\dtypes.py:516: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a
+ future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorflow\python\framework\dtypes.py:517: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a
+ future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorflow\python\framework\dtypes.py:518: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a
+ future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorflow\python\framework\dtypes.py:519: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a
+ future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorflow\python\framework\dtypes.py:520: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a
+ future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorflow\python\framework\dtypes.py:525: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a
+ future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorboard\compat\tensorflow_stub\dtypes.py:541: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecate
+d; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorboard\compat\tensorflow_stub\dtypes.py:542: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecate
+d; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorboard\compat\tensorflow_stub\dtypes.py:543: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecate
+d; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorboard\compat\tensorflow_stub\dtypes.py:544: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecate
+d; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorboard\compat\tensorflow_stub\dtypes.py:545: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecate
+d; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorboard\compat\tensorflow_stub\dtypes.py:550: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecate
+d; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+Using TensorFlow backend.
+>loaded 2 examples for class: 1
+>loaded 2 examples for class: 2
+(4, 160, 160, 3) (4,)
+>loaded 2 examples for class: 1
+>loaded 2 examples for class: 2
+(4, 160, 160, 3) (4,)
+
+(facerecog) C:\Users\Dhananjay\Downloads\FaceIdentification_final-20200124T183104Z-001\FaceIdentification_final>python create_face_embeddings.py
+Using TensorFlow backend.
+C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorflow\python\framework\dtypes.py:516: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a
+ future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorflow\python\framework\dtypes.py:517: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a
+ future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorflow\python\framework\dtypes.py:518: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a
+ future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorflow\python\framework\dtypes.py:519: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a
+ future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorflow\python\framework\dtypes.py:520: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a
+ future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorflow\python\framework\dtypes.py:525: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a
+ future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorboard\compat\tensorflow_stub\dtypes.py:541: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecate
+d; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorboard\compat\tensorflow_stub\dtypes.py:542: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecate
+d; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorboard\compat\tensorflow_stub\dtypes.py:543: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecate
+d; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorboard\compat\tensorflow_stub\dtypes.py:544: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecate
+d; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorboard\compat\tensorflow_stub\dtypes.py:545: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecate
+d; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorboard\compat\tensorflow_stub\dtypes.py:550: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecate
+d; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+Loaded :  (4, 160, 160, 3) (4,) (4, 160, 160, 3) (4,)
+WARNING:tensorflow:From C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\keras\backend\tensorflow_backend.py:4070: The name tf.nn.max_pool is deprecated. Please use tf.nn.max_p
+ool2d instead.
+
+C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\keras\engine\saving.py:341: UserWarning: No training configuration found in save file: the model was *not* compiled. Compile it
+ manually.
+  warnings.warn('No training configuration found in save file: '
+Facenet Model Loaded
+WARNING:tensorflow:From C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\keras\backend\tensorflow_backend.py:422: The name tf.global_variables is deprecated. Please use tf.comp
+at.v1.global_variables instead.
+
+(4, 128)
+(4, 128)
+
+(facerecog) C:\Users\Dhananjay\Downloads\FaceIdentification_final-20200124T183104Z-001\FaceIdentification_final>python classify_webcam.py
+Using TensorFlow backend.
+C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorflow\python\framework\dtypes.py:516: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a
+ future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorflow\python\framework\dtypes.py:517: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a
+ future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorflow\python\framework\dtypes.py:518: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a
+ future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorflow\python\framework\dtypes.py:519: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a
+ future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorflow\python\framework\dtypes.py:520: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a
+ future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorflow\python\framework\dtypes.py:525: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a
+ future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorboard\compat\tensorflow_stub\dtypes.py:541: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecate
+d; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorboard\compat\tensorflow_stub\dtypes.py:542: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecate
+d; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorboard\compat\tensorflow_stub\dtypes.py:543: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecate
+d; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorboard\compat\tensorflow_stub\dtypes.py:544: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecate
+d; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorboard\compat\tensorflow_stub\dtypes.py:545: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecate
+d; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorboard\compat\tensorflow_stub\dtypes.py:550: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecate
+d; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+WARNING:tensorflow:From C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\keras\backend\tensorflow_backend.py:4070: The name tf.nn.max_pool is deprecated. Please use tf.nn.max_p
+ool2d instead.
+
+C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\keras\engine\saving.py:341: UserWarning: No training configuration found in save file: the model was *not* compiled. Compile it
+ manually.
+  warnings.warn('No training configuration found in save file: '
+Predicted: 2 (50.000)
+Predicted: 2 (50.000)
+Predicted: 2 (50.000)
+Predicted: 2 (50.000)
+Predicted: 1 (50.000)
+Predicted: 2 (50.000)
+Predicted: 2 (50.000)
+Traceback (most recent call last):
+  File "classify_webcam.py", line 76, in <module>
+    detector = MTCNN()
+  File "C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\mtcnn\mtcnn.py", line 88, in __init__
+    self._pnet, self._rnet, self._onet = NetworkFactory().build_P_R_O_nets_from_file(weights_file)
+  File "C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\mtcnn\network\factory.py", line 128, in build_P_R_O_nets_from_file
+    r_net.set_weights(weights['rnet'])
+  File "C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\keras\engine\network.py", line 527, in set_weights
+    K.batch_set_value(tuples)
+  File "C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\keras\backend\tensorflow_backend.py", line 2960, in batch_set_value
+    tf_keras_backend.batch_set_value(tuples)
+  File "C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorflow\python\keras\backend.py", line 3071, in batch_set_value
+    get_session().run(assign_ops, feed_dict=feed_dict)
+  File "C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorflow\python\client\session.py", line 950, in run
+    run_metadata_ptr)
+  File "C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorflow\python\client\session.py", line 1173, in _run
+    feed_dict_tensor, options, run_metadata)
+  File "C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorflow\python\client\session.py", line 1350, in _do_run
+    run_metadata)
+  File "C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorflow\python\client\session.py", line 1356, in _do_call
+    return fn(*args)
+  File "C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorflow\python\client\session.py", line 1339, in _run_fn
+    self._extend_graph()
+  File "C:\Users\Dhananjay\Anaconda3\envs\facerecog\lib\site-packages\tensorflow\python\client\session.py", line 1374, in _extend_graph
+    tf_session.ExtendSession(self._session)
+KeyboardInterrupt
+[ WARN:1] global C:\projects\opencv-python\opencv\modules\videoio\src\cap_msmf.cpp (674) SourceReaderCB::~SourceReaderCB terminating async callback
+
+(facerecog) C:\Users\Dhananjay\Downloads\FaceIdentification_final-20200124T183104Z-001\FaceIdentification_final>
